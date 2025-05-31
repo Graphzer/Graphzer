@@ -26,7 +26,7 @@ poetry self add poetry-plugin-shell
 # Verify Poetry installation
 poetry --version
 ```
-```
+```bash
 # Install Graphzer (Make sure you've installed poetry)
 git clone https://github.com/Graphzer/Graphzer.git
 cd graphzer
