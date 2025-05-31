@@ -13,7 +13,8 @@ Advanced GraphQL endpoint discovery and analysis tool with precision domain scan
 ### Docker (Recommended)
 ```bash
 # One-line install and run
-docker build -t graphzer . && docker run --rm graphzer --help
+docker pull graphzer/graphzer
+docker run --rm graphzer/graphzer -d example.com
 ```
 
 ### Local Installation using Poetry
@@ -41,8 +42,8 @@ graphzer
 # Docker
 docker run --rm graphzer -d example.com
 
-# Python
-python -m graphzer -d example.com
+# Local
+graphzer -d example.com
 ```
 
 ### Bulk Domain Scan
@@ -52,8 +53,8 @@ python -m graphzer -d example.com
 # Docker
 docker run --rm -v $(pwd):/data graphzer -f /data/domains.txt
 
-# Python  
-python -m graphzer -f domains.txt
+# Local 
+graphzer -f domains.txt
 ```
 
 ### Save Results
@@ -61,8 +62,8 @@ python -m graphzer -f domains.txt
 # Docker
 docker run --rm -v $(pwd):/data graphzer -d example.com -o /data/results.txt
 
-# Python
-python -m graphzer -d example.com -o results.txt
+# Local
+graphzer -d example.com -o results.txt
 ```
 
 ## Output Examples
