@@ -28,7 +28,7 @@ poetry --version
 ```
 ```
 # Install Graphzer (Make sure you've installed poetry)
-git clone <repository>
+git clone https://github.com/Graphzer/Graphzer.git
 cd graphzer
 poetry install
 graphzer
