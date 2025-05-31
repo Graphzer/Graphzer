@@ -1,0 +1,54 @@
+[tool.poetry]
+name = "graphzer"
+version = "2.0.0b4"
+description = "GraphQL endpoint detector and analyzer"
+authors = ["Graphzer Contributors"]
+license = "MIT"
+packages = [
+    { include = "graphzer" }
+]
+readme = "README.md"
+
+[tool.poetry.scripts]
+graphzer = 'graphzer:cli'
+
+[tool.coverage.run]
+omit = [
+    'graphzer/__main__.py',
+    'tests/*'
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = 'strict'
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+aiohttp = "^3.9.0"
+beautifulsoup4 = "^4.12.0"
+requests = "^2.31.0"
+
+[tool.poetry.group.dev.dependencies]
+autoflake = "^2.2.0"
+docformatter = "^1.7.0"
+isort = "^5.12.0"
+mypy = "^1.5.0"
+poetryup = "^0.12.3"
+pylint = "^2.17.0"
+pylint-quotes = "^0.2.3"
+pytest = "^7.4.0"
+pytest-asyncio = "^0.21.0"
+pytest-cov = "^4.1.0"
+pytest-mock = "^3.11.0"
+pytest-rerunfailures = "^12.0"
+setuptools = ">=68.0.0"
+snakeviz = "^2.2.0"
+types-PyYAML = "^6.0.12"
+types-requests = "^2.31.0"
+types-setuptools = "^68.2.0"
+unify = "^0.5"
+vulture = "^2.10"
+yapf = "^0.40.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

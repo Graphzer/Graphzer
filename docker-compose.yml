@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  graphzer:
+    build: .
+    volumes:
+      - ./data:/data
+    command: ["--help"]
+    
+  # Example service for single domain scan
+  scan-domain:
+    build: .
+    volumes:
+      - ./data:/data
+    command: ["-d", "example.com", "-o", "/data/results.txt"]
+    
+  # Example service for bulk domain scan  
+  scan-bulk:
+    build: .
+    volumes:
+      - ./data:/data
+    command: ["-f", "/data/domains.txt", "-o", "/data/bulk_results.txt"]
